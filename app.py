@@ -174,8 +174,13 @@ from urllib3.util.retry import Retry
 # ============================
 # TMDB API KEY
 # ============================
-API_KEY = "c077bec43e62466c735aad01495a1812"
+# API_KEY = "c077bec43e62466c735aad01495a1812"
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.getenv("TMDB_API_KEY")
 # ============================
 # STREAMLIT CONFIG
 # ============================
